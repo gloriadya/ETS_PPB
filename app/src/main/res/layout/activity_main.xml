@@ -53,7 +53,7 @@
 
         <!-- URL Input -->
         <TextView
-            android:id="@+id/header"
+            android:id="@+id/txt_url"
             android:layout_marginTop="-15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
 
         <!-- Customize Link Section -->
         <TextView
-            android:id="@+id/header"
+            android:id="@+id/txt_custom_link"
             android:layout_marginTop="-18dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

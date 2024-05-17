@@ -1,6 +1,7 @@
 package com.example.ets.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -12,6 +13,7 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
+import com.example.ets.MainActivity
 import com.example.ets.databinding.ActivityLoginBinding
 
 import com.example.ets.R
@@ -57,7 +59,10 @@ class LoginActivity : AppCompatActivity() {
                 showLoginFailed(loginResult.error)
             }
             if (loginResult.success != null) {
-                updateUiWithUser(loginResult.success)
+//                updateUiWithUser(loginResult.success)
+                val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("EXTRA_MESSAGE", "Hello, Second Activity!")
+                startActivity(intent)
             }
             setResult(Activity.RESULT_OK)
 
